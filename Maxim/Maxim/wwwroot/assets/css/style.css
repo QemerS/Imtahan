@@ -1,0 +1,47 @@
+.text-limit {
+    width: 370px;
+    white-space: wrap;
+}
+.profile {
+    border-radius: 50%;
+}
+.border-transparant{
+    border:transparent 1px solid;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: 160px;
+  }
+  .bg-image {
+    background-image: url('../img/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    height: 800px;
+  }
+  ::selection{
+      color: black;
+      background: orange;
+  }
+.green-hover:hover {
+    transition: all 0.5s;
+      color: green !important;
+  }
+.nav-fix {
+    position: fixed;
+  top: 0;
+  width: 100%;
+}
+.firstest {
+    z-index: 99;
+}
+.adding-transition {
+    transition: all 0.5s;
+}
+.send-btn-color {
+    background-color: rgba(1, 230, 123, 0.534);
+    color: white;
+}

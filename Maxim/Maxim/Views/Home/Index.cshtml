@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+@model ServiceVm
+<header>
+    <div class="container-fluid bg-image pt-5">
+        <div class="row pt-5">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <img src="~/assets/img/logo-image.png" class="pt-5" alt="">
+            </div>
+
+
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container-fluid bg-success p-5 ps-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 fw-bold text-end">
+                <blockquote class="fs-1 text-white">
+                    There's huge space beetween creativity and imagination
+                    <p><cite class="fs-5 text-dark">Mark Simmons, Nett Media</cite></p>
+                </blockquote>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <i class="fas fa-coffee fa-10x text-white"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="bg-light">
+    <div class="container p-5 me-auto">
+        <div class="row pb-1">
+            <div class="col-12">
+                <h2 class="text-center fs-1 fw-bold">
+                    Who We Are
+                </h2>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-6 ">
+                <p class="fs-2 ">We live with <b>creativity</b></p>
+                <p class="text-limit">
+                    Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.
+                    Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues
+                    differe solmen in li grammatica, li pronunciation e li plu commun vocabules.
+                    Omnicos directeal desirabilite de un nov lingua franca:On refusa continuar payar custosi traductores.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="~/assets/img/creativity.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-2 col-md-4 text-center">
+                <div class="image-container ">
+                    <img class="profile" src="~/assets/img/img-1.jpg" alt="">
+                </div>
+                <div>
+                    <h3>John Doe</h3>
+                    <p>Art director</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 text-center">
+                <div class="image-container ">
+                    <img class="profile" src="~/assets/img/img-2.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Mike Doe</h3>
+                    <p>Web developer</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 text-center">
+                <div class="image-container ">
+                    <img class="profile" src="~/assets/img/img-3.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Neil Doe</h3>
+                    <p>Web designer</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 text-center">
+                <div class="image-container ">
+                    <img class="profile" src="~/assets/img/img-4.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Mark Joe</h3>
+                    <p>UI designer</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 text-center">
+                <div class="image-container ">
+                    <img class="profile" src="~/assets/img/img-5.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Stephen B</h3>
+                    <p>Digital imaging</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="bg-warning p-5 text-white">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold text-center fs-1">Services</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.Services)
+            {
+                <div class="col-lg-3 col-md-6">
+                    <div class="card bg-warning border-transparant">
+                        <img src="~/Uploads/@item.Image" />
+                        <div class="card-body text-center">
+                            <h3>@item.Title</h3>
+                            <p>@item.Text</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            
+        </div>
+    </div>
+</section>
+<section id="contact" class="p-5 bg-success text-white">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-12 ">
+                <h2 class="text-center fs-1">Get in Touch</h2>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12">
+                <p class="fs-6">
+                    Reque facer nostro et ius, cu persius mnesarchum disputando eam,
+                    clita prompta et mel vidisse phaedrum pri et. Facilisis posidonium
+                    ex his. Mutat iudico vis in, mea aeque tamquam scripserit an, mea eu
+                    ignota viderer probatus. Lorem legere consetetur eieum. Sumo aeque assentior
+                    te eam, pri nominati posidonium consttuam
+                </p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12 pb-5">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <input type="text" class="form-control py-3 mb-4 fs-5" placeholder="Your name" aria-label="Your name">
+                            <input type="email" class="form-control  py-3 mb-4 fs-5" placeholder="Your Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" class="form-control py-3 mb-4 fs-5" placeholder="Subject" aria-label="Subject">
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <textarea class="form-control mb-4" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 155px"></textarea>
+                            <button type="submit" class="btn send-btn-color p-3">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
